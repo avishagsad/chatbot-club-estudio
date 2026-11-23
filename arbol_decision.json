@@ -1,0 +1,74 @@
+{
+  "configuracion": {
+    "tituloDocumento": "Lila · Club de estudio",
+    "etiquetaSuperior": "CLUB DE ESTUDIO · UN ESPACIO PARA APRENDER",
+    "tituloPagina": "Un ratito para ordenar las ideas ✳",
+    "descripcionPagina": "Una guía amable para encontrar tu próximo paso de estudio.",
+    "nombreBot": "Lila",
+    "subtituloBot": "GUÍA DEL CLUB · DISPONIBLE",
+    "etiquetaConversacion": "HOY, UN PASO A LA VEZ",
+    "textoPie": "Un espacio tranquilo para estudiar en compañía.",
+    "notaPagina": "Elegí una opción para seguir. Siempre podés volver al menú.",
+    "textoCampoNombre": "Tu nombre",
+    "placeholderNombre": "Escribí tu nombre…",
+    "enviarNombre": "Continuar",
+    "errorNombreVacio": "Escribí tu nombre para que podamos saludarte.",
+    "errorNombreLargo": "Usá un nombre de hasta 40 caracteres.",
+    "errorCarga": "No se pudo cargar el árbol de conversación. Revisá que arbol_decision.json esté disponible y volvé a cargar la página.",
+    "errorSinServidor": "Para abrir el chatbot, iniciá un servidor local (por ejemplo, Live Server) y volvé a cargar la página. El navegador no permite leer el archivo JSON cuando se abre directamente desde el disco.",
+    "errorArbol": "El árbol de conversación tiene un problema: {detalle}",
+    "errorDestino": "la opción «{opcion}» apunta al nodo inexistente «{destino}»",
+    "errorNodo": "el nodo «{nodo}» no tiene un texto o una lista de opciones válida",
+    "ariaConversacion": "Mensajes de la conversación",
+    "ariaOpciones": "Opciones de respuesta",
+    "ariaEnviarNombre": "Continuar con mi nombre",
+    "ariaError": "Aviso del chatbot",
+    "inicio": "bienvenida"
+  },
+  "nodos": {
+    "bienvenida": {
+      "texto": "¡Hola! Soy Lila, la guía del club. 🌷\n¿Cómo te llamás?",
+      "solicitaDato": "nombre",
+      "opciones": []
+    },
+    "menu": {
+      "texto": "¡Qué lindo tenerte, {nombre}! ✨\n¿Qué te gustaría consultar?",
+      "opciones": [
+        { "texto": "◷  Horarios", "siguiente": "horarios" },
+        { "texto": "✿  Materias", "siguiente": "materias" },
+        { "texto": "✎  Técnicas de estudio", "siguiente": "tecnicas" },
+        { "texto": "♡  Contacto", "siguiente": "contacto" },
+        { "texto": "Cerrar por ahora", "siguiente": "despedida", "estilo": "principal" }
+      ]
+    },
+    "horarios": {
+      "texto": "Nos encontramos de lunes a viernes, de 16 a 19 h. Podés sumarte al espacio común cuando quieras dentro de ese horario. 🕰️",
+      "opciones": [ { "texto": "Volver al menú", "siguiente": "menu" } ]
+    },
+    "materias": {
+      "texto": "En el club hacemos lugar para matemática, lengua, ciencias e idiomas. También podés traer esa materia que te viene dando vueltas. 📚",
+      "opciones": [ { "texto": "Volver al menú", "siguiente": "menu" } ]
+    },
+    "tecnicas": {
+      "texto": "Probá estudiar en bloques cortos: 25 minutos de foco y 5 de pausa. Al final, contá con tus palabras qué aprendiste; explicar también ayuda a fijar las ideas. 🌱",
+      "opciones": [ { "texto": "Volver al menú", "siguiente": "menu" } ]
+    },
+    "contacto": {
+      "texto": "Podés acercarte a la mesa de coordinación durante el horario del club. Te esperamos allí para escuchar tu consulta. 💌",
+      "opciones": [ { "texto": "Volver al menú", "siguiente": "menu" } ]
+    },
+    "despedida": {
+      "texto": "Gracias por pasar, {nombre}. Ojalá te lleves una idea más clara y un poquito de calma. ¡Nos vemos pronto! 🌷",
+      "opciones": [ { "texto": "Empezar de nuevo", "siguiente": "bienvenida", "estilo": "principal" } ]
+    }
+  },
+  "edicionManualPendiente": {
+    "descripcion": "Para registrar la edición manual pedida en la consigna, agregar esta opción al arreglo «opciones» del nodo «materias» y probar que abre el nodo «tecnicas». La opción queda pendiente para la versión editada a mano.",
+    "nodoOrigen": "materias",
+    "opcionParaAgregar": {
+      "texto": "Ver técnicas para esta materia",
+      "siguiente": "tecnicas"
+    },
+    "destinoExistente": "tecnicas"
+  }
+}
