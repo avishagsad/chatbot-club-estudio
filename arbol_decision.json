@@ -46,8 +46,11 @@
       "opciones": [ { "texto": "Volver al menú", "siguiente": "menu" } ]
     },
     "materias": {
-      "texto": "En el club hacemos lugar para matemática, lengua, ciencias e idiomas. También podés traer esa materia que te viene dando vueltas. 📚",
-      "opciones": [ { "texto": "Volver al menú", "siguiente": "menu" } ]
+      "texto": "En el club estudiamos matemática, lengua, ciencias e idiomas. También podés traer esa materia que te viene dando vueltas. 📚",
+      "opciones": [
+        { "texto": "Ver técnicas para esta materia", "siguiente": "tecnicas" },
+        { "texto": "Volver al menú", "siguiente": "menu" }
+      ]
     },
     "tecnicas": {
       "texto": "Probá estudiar en bloques cortos: 25 minutos de foco y 5 de pausa. Al final, contá con tus palabras qué aprendiste; explicar también ayuda a fijar las ideas. 🌱",
@@ -62,10 +65,10 @@
       "opciones": [ { "texto": "Empezar de nuevo", "siguiente": "bienvenida", "estilo": "principal" } ]
     }
   },
-  "edicionManualPendiente": {
-    "descripcion": "Para registrar la edición manual pedida en la consigna, agregar esta opción al arreglo «opciones» del nodo «materias» y probar que abre el nodo «tecnicas». La opción queda pendiente para la versión editada a mano.",
+  "edicionManualRealizada": {
+    "descripcion": "Se cambió el texto del nodo «materias» y se agregó una opción que abre el nodo existente «tecnicas».",
     "nodoOrigen": "materias",
-    "opcionParaAgregar": {
+    "opcionAgregada": {
       "texto": "Ver técnicas para esta materia",
       "siguiente": "tecnicas"
     },
