@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f8f1f8">
+    <meta name="description" content="Asistente de bienvenida del club de estudio, guiado por opciones.">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main class="page-shell">
+      <header class="intro">
+        <p class="eyebrow" id="eyebrow"></p>
+        <h1 id="page-title"></h1>
+        <p class="intro-copy" id="intro-copy"></p>
+      </header>
+
+      <section class="chat-card" aria-labelledby="chat-title">
+        <header class="chat-header">
+          <div class="avatar" aria-hidden="true">
+            <svg viewBox="0 0 48 48" focusable="false">
+              <path d="M12 28c3-9 8-13 12-13s9 4 12 13M17 22h.1M31 22h.1M19 31c3 3 7 3 10 0" />
+              <path d="M24 5c2 4 5 5 9 5-3 3-4 6-3 10-3-2-6-2-9 0 1-4 0-7-3-10 4 0 6-1 6-5Z" />
+            </svg>
+          </div>
+          <div class="identity">
+            <h2 id="chat-title"></h2>
+            <p class="chat-subtitle" id="chat-subtitle"></p>
+          </div>
+          <span class="status-dot" id="status-dot" aria-hidden="true"></span>
+        </header>
+
+        <div class="chat-body">
+          <p class="day-label" id="day-label"></p>
+          <div class="conversation" id="conversation" aria-live="polite" aria-relevant="additions text"></div>
+          <form class="name-form" id="name-form" hidden novalidate>
+            <label class="visually-hidden" id="name-label" for="name-input"></label>
+            <input id="name-input" name="name" type="text" autocomplete="given-name" maxlength="40" required>
+            <button class="send-button" id="send-button" type="submit" aria-label="">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 14-7-4 14-3-6-7-1Zm7 1 7-8" /></svg>
+            </button>
+          </form>
+          <p class="notice" id="notice" role="alert" hidden></p>
+          <nav class="choices" id="choices" aria-label=""></nav>
+        </div>
+        <footer class="chat-footer"><span class="footer-flower" aria-hidden="true">✿</span><span id="footer-copy"></span></footer>
+      </section>
+
+      <p class="page-note" id="page-note"></p>
+    </main>
+  </body>
+</html>
