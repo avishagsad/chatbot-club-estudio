@@ -13,6 +13,7 @@
     "placeholderNombre": "Escribí tu nombre…",
     "enviarNombre": "Continuar",
     "errorNombreVacio": "Escribí tu nombre para que podamos saludarte.",
+    "errorNombreInvalido": "El nombre no puede contener números.",
     "errorNombreLargo": "Usá un nombre de hasta 40 caracteres.",
     "errorCarga": "No se pudo cargar el árbol de conversación. Revisá que arbol_decision.json esté disponible y volvé a cargar la página.",
     "errorSinServidor": "Para abrir el chatbot, iniciá un servidor local (por ejemplo, Live Server) y volvé a cargar la página. El navegador no permite leer el archivo JSON cuando se abre directamente desde el disco.",

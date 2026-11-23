@@ -130,6 +130,12 @@
       ui.nameInput.focus();
       return;
     }
+    if (/\d/.test(capturado)) {
+      ui.notice.hidden = false;
+      ui.notice.textContent = arbol.configuracion.errorNombreInvalido;
+      ui.nameInput.focus();
+      return;
+    }
     if (capturado.length > 40) {
       ui.notice.hidden = false;
       ui.notice.textContent = arbol.configuracion.errorNombreLargo;
